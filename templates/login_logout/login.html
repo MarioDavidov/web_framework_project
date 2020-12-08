@@ -31,15 +31,15 @@
             <span class="border border-info">
                 {% block content %}
 
-                    <form method="post" action="{% url 'register_user' %}" enctype="multipart/form-data">
+                     <form method="post" action="{% url 'login_user' %}">
+
 
                 <div class="p-3 mb-2 bg-info text-white">
-                    <p1>Register or Login to continue</p1>
+                    <p1>Login</p1>
                 </div>
 
                 <div class="p-3 mb-2 bg-light text-dark">
-                    <div class="form-group">
-                  {{user_form}}
+                    {{ login_form }}
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
