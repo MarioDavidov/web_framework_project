@@ -1,0 +1,9 @@
+{% extends 'shared/navigation.html' %}
+
+{% block site_content %}
+<ul>
+    {% for work in workouts %}
+        <li>{{ work }}</li>{
+    {% endfor %}
+</ul>
+{% endblock %}

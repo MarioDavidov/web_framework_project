@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'shared/navigation.html' %}
+{% block site_content %}
+<form action="{% url 'workouts' %}" method="POST">
+    <div class="items-container">
+        <div class="item">
+            {{ form }}
+            {% csrf_token %}
+              <input type="submit" class="btn btn-success">Create Workout</input>
+    </div>
+</form>
+{% endblock %}
