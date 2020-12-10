@@ -16,13 +16,9 @@
 <body>
 
 <div class="p-3 mb-2 bg-light text-dark">
-    <nav class="navbar navbar-light" style="background-color: #B0E0E6;">
-        <nav class="nav">
-            <a class="nav-link" href="{% url 'register_user' %}"><div style="color: #996633">Register</div></a>
-            <a class="nav-link" href="{% url 'login_user' %}"><div style="color: #996633">Login</div></a>
 
-        </nav>
-    </nav>
+    {% include 'shared/register_login_navigation.html' %}
+
 <div id="root">
     <div class="container">
         <div class="row">

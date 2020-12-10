@@ -15,19 +15,7 @@
 
 <body>
 
-<div class="p-3 mb-2 bg-light text-dark">
-    <nav class="navbar navbar-light" style="background-color: #B0E0E6;">
-        <nav class="nav">
-
-            <a class="nav-link" href="{% url 'user profile' profile_user.id %}"><div style="color: #996633"> Home</div></a>
-            <a class="nav-link" href="{% url 'user profile' profile_user.id %}"><div style="color: #996633"> {{ profile_user.username}}</div></a>
-            <a class="nav-link" href="{% url 'workouts' %}"><div style="color: #996633"> Workouts</div></a>
-            <a class="nav-link" href="#"><div style="color: #996633"> Weight</div></a>
-            <a class="nav-link" href="#"><div style="color: #996633"> Progress pictures</div></a>
-            <a class="nav-link" href="{% url 'logout_user' %}"><div style="color: #996633"> Logout</div></a>
-
-        </nav>
-    </nav>
+{% include 'shared/site_navigation.html' %}
 
     <div class="container
             <div class="row">
@@ -42,9 +30,8 @@
                          </div>
                      </div>
                 </form>
-                <!--<a href="{%  url 'create_workout' %}"><div style="color: #996633">Create Workout</div></a>-->
+
                  <a href="{%  url 'create_workout' %}" class="btn btn-success">Create workout</a>
-            </div>
 
 
 
