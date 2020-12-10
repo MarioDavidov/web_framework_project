@@ -8,9 +8,22 @@ def home_page(request):
     return render(request, 'home/home_for_users.html')
 
 def workouts(request):
-    return render(request, 'workouts.html')
+    if Workout.objects.exists():
+        workout = Workout.objects.all()
+        context ={
+            'workout': workout,
+        }
+        return render(request, 'workouts.html',context)
+    else:
+        workout = Workout.objects.all()
+        context={
+            'workout': workout
+        }
+        return render(request, 'workouts.html',context)
+
 
 #NxBhej_4g+KBw9YQ
+#$AU2QdtJt5re7mQ&
 def create_workout(request):
     #workout = Workout.objects.get(pk =pk)
     if request.method == 'GET':
@@ -20,13 +33,14 @@ def create_workout(request):
         return render(request, 'create_workout.html', context)
     else:
         form = WorkoutForm(request.POST)
+        #
         if form.is_valid():
             form.save()
-            return redirect('home_page')
+            return redirect('workouts')
         context = {
             'form': WorkoutForm(),
         }
-        return render(request, 'workouts.html', context)
+        return render(request, 'home/home_for_users.html', context)
 
 
 def edit_workout(request):

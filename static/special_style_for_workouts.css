@@ -37,3 +37,11 @@ textarea {
     display: block;
     margin: 0 auto;
 }
+
+h2 {
+    text-align: center;
+}
+
+.list-horizontal .list-item {
+    display: inline-block;
+}

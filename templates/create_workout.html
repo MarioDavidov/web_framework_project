@@ -1,6 +1,6 @@
 {% extends 'shared/navigation.html' %}
 {% block site_content %}
-<form action="{% url 'workouts' %}" method="POST">
+<form action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
     <div class="items-container">
         <div class="item">
             {{ form }}

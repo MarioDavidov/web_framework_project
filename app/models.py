@@ -14,3 +14,5 @@ class Workout(models.Model):
     notes = models.TextField(max_length=200)
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+
+

@@ -16,6 +16,7 @@ def user_profile(request, pk =None):
             'profile_user': user,
             'profile': user.userprofile,
             'form': ProfileForm(),
+            'workout':user.userprofile.workout_set.all()
         }
         return render(request, 'home/home_for_users.html',context)
     else:

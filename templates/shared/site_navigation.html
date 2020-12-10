@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light" style="background-color: #B0E0E6;">
+    <nav class="nav">
+
+        <a class="nav-link" href="{% url 'user profile' profile_user.id %}"><div style="color: #996633"> Home</div></a>
+        <a class="nav-link" href="{% url 'user profile' profile_user.id %}"><div style="color: #996633"> {{ profile_user.username}}</div></a>
+        <a class="nav-link" href="{% url 'workouts' %}"><div style="color: #996633"> Workouts</div></a>
+        <a class="nav-link" href="#"><div style="color: #996633"> Weight</div></a>
+        <a class="nav-link" href="#"><div style="color: #996633"> Progress pictures</div></a>
+        <a class="nav-link" href="{% url 'logout_user' %}"><div style="color: #996633"> Logout</div></a>
+
+    </nav>
+</nav>
