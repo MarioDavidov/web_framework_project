@@ -1,0 +1,31 @@
+{% extends 'workouts.html' %}
+
+<body>
+{% block site_content %}
+     <div class="container">
+     <center>
+        <div style="color: #996633">
+            <h1>Details about this workout?</h1>
+        </div>
+     </center>
+         <ul class="list-horizontal list-item">
+            <div class="items-container">
+                <div class="item">
+                    <form method="post">
+                        <h2>Tittle: {{ workout.tittle }}</h2>
+                        <p>Date: {{ workout.date }}</p>
+                        <p>First exercise: {{ workout.first_exercise }}</p>
+                        <p>Second exercise: {{ workout.second_exercise }}</p>
+                        <p>Third exercise: {{ workout.third_exercise }}</p>
+                        <p>Fourth exercise: {{ workout.fourth_exercise }}</p>
+                        <p>Fifth exercise: {{ workout.fifth_exercise }}</p>
+                        <p>Workout notes: {{ workout.notes }}</p>
+                        <input type="submit" class="btn btn-warning" value="Go back to your profile">
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+         </ul>
+     </div>
+{% endblock %}
+</body>

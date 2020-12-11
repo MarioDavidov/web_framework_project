@@ -1,0 +1,26 @@
+{% extends 'workouts.html' %}
+
+
+
+<body>
+{% block site_content %}
+     <div class="container">
+     <center>
+        <div style="color: #996633">
+            <h1>Edit this workout?</h1>
+        </div>
+     </center>
+         <ul class="list-horizontal list-item">
+            <div class="items-container">
+                <div class="item">
+                    <form method="post">
+                        {{ form }}
+                        <input type="submit" class="btn btn-secondary" value="Edit">
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+         </ul>
+     </div>
+{% endblock %}
+</body>

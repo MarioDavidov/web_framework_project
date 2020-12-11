@@ -4,7 +4,7 @@
 }
 body {
     background: #F0F8FF;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'cursive', "Berlin Sans FB";
     margin: 0;
     padding: 0;
 }
@@ -18,11 +18,12 @@ div.items-container {
 }
 
 div.item {
-    width: 70%;
+    width: 50%;
     background: #B0E0E6;
     margin:5px;
     padding: 30px;
     border-radius: 10px;
+
 
 }
 
@@ -30,10 +31,12 @@ form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+
 }
 
 form input,
 textarea {
+
     padding: 7px;
     border: 2px solid #f1f1e8;
     border-radius: 2px;
@@ -45,4 +48,7 @@ textarea {
 #root{
     width: 1046px;
     margin: 0 auto;
+}
+p {
+  font-size: 18px;
 }
