@@ -23,7 +23,7 @@ def workouts(request):
         return render(request, 'workouts.html',context)
     else:
         workout = Workout.objects.all()
-        context={
+        context= {
             'workout': workout
         }
         return render(request, 'workouts.html',context)

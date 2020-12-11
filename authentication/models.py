@@ -3,7 +3,9 @@ from django.db import models
 
 
 class UserProfile(models.Model):
-    profile_pic = models.URLField(blank=True)
+    profile_pic = models.ImageField(
+        upload_to='users',
+        blank=True)
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 

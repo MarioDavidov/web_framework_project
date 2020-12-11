@@ -14,19 +14,32 @@
 </head>
 
 <div>
-
+</div>
+</div>
+<body>
 {% include 'shared/site_navigation.html' %}
-
+<center>
     <div class="container
             <div class="row">
 
-                <h1><div style="color: #996633"> Hello ,{{profile_user.username}}</div></h1>
+                <h1>
+                    <div style="color: #996633">
+                        Hello ,{{profile_user.username}}
+                    </div>
+                </h1>
+                {% if profile.profile_pic %}
+                    <img src="{{ profile.profile_pic.url }}" width="250" height="200" alt="">
+                {% else %}
                 <img src="https://cdn5.vectorstock.com/i/thumb-large/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.jpg" alt="">
+                {% endif %}
                 <form action="{% url 'current user profile' %}" method="post" enctype="multipart/form-data">
                      <div class="items-container">
                          <div class="item">
+                             <form action="{% url 'current user profile'%}" method="post" enctype="multipart/form-data">
                                 {{form}}
                                 {% csrf_token %}
+                                <button type="button" class="btn btn-dark">Upload Profile Picture</button>
+                             </form>
                          </div>
                      </div>
                 </form>
@@ -34,7 +47,7 @@
                  <a href="{%  url 'create_workout' %}" class="btn btn-success">Create workout</a>
             </div>
         </div>
-
+</center>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
