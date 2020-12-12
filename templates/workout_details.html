@@ -20,7 +20,8 @@
                         <p>Fourth exercise: {{ workout.fourth_exercise }}</p>
                         <p>Fifth exercise: {{ workout.fifth_exercise }}</p>
                         <p>Workout notes: {{ workout.notes }}</p>
-                        <input type="submit" class="btn btn-warning" value="Go back to your profile">
+                        <a href="{% url 'workouts' %}" class="btn btn-warning">Go back to workouts</a>
+
                         {% csrf_token %}
                     </form>
                 </div>

@@ -1,9 +1,11 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
 from app.forms.workout import WorkoutForm
 from app.models import Workout
 from django.views import generic as views
+from authentication.views import user_profile
 
 
 def home_page(request):
@@ -14,11 +16,15 @@ class WorkoutsView(views.ListView):
     template_name = 'workouts.html'
     context_object_name = 'workout'
 """
-def workouts(request):
+def workouts(request,pk=None):
+    user = request.user if pk is None else User.objects.get(pk=pk)
     if Workout.objects.exists():
         workout = Workout.objects.all()
         context ={
             'workout': workout,
+            'profile_user': user,
+            'profile': user.userprofile,
+            'workouts_user': user.userprofile.workout_set.all(),
         }
         return render(request, 'workouts.html',context)
     else:

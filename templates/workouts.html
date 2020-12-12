@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,23 +35,28 @@
     <ul class="list-horizontal list-item">
 
 
-        {% for work in workout %}
-            <div class="items-container">
-                <div class="item">
-                    <h2>Tittle: {{ work.tittle }}</h2>
-                    <p>Date: {{ work.date }}</p>
-                    <p>First exercise: {{ work.first_exercise }}</p>
-                    <p>Second exercise: {{ work.second_exercise }}</p>
-                    <p>Third exercise: {{ work.third_exercise }}</p>
-                    <p>Fourth exercise: {{ work.fourth_exercise }}</p>
-                    <p>Fifth exercise: {{ work.fifth_exercise }}</p>
-                    <p>Workout notes: {{ work.notes }}</p>
+        {% for work in workouts_user %}
 
-                    <a href="{% url 'edit_workout' work.id %}" class="btn btn-secondary">Edit workout</a>
-                    <a href="{% url 'delete_workout' work.id %}" class="btn btn-danger">Delete workout</a>
-                    <a href="{% url 'details_workout' work.id %}" class="btn btn-warning">Workout details</a>
+                <div class="items-container">
+                    <div class="item">
+
+
+                        <h2>Tittle: {{ work.tittle }}</h2>
+                        <p>Date: {{ work.date }}</p>
+                        <p>First exercise: {{ work.first_exercise }}</p>
+                        <p>Second exercise: {{ work.second_exercise }}</p>
+                        <p>Third exercise: {{ work.third_exercise }}</p>
+                        <p>Fourth exercise: {{ work.fourth_exercise }}</p>
+                        <p>Fifth exercise: {{ work.fifth_exercise }}</p>
+                        <p>Workout notes: {{ work.notes }}</p>
+
+                        <a href="{% url 'edit_workout' work.id %}" class="btn btn-secondary">Edit workout</a>
+                        <a href="{% url 'delete_workout' work.id %}" class="btn btn-danger">Delete workout</a>
+                        <a href="{% url 'details_workout' work.id %}" class="btn btn-warning">Workout details</a>
+
+                    </div>
                 </div>
-        </div>
+
 
         {% endfor %}
 
