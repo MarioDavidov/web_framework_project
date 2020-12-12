@@ -9,17 +9,17 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/special_style_for_workouts.css">
 
-{% include 'shared/site_navigation.html' %}
+    {% include 'shared/site_navigation.html' %}
 </head>
 
 {% block site_content %}
-<form action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
-    <div class="items-container">
-        <div class="item">
-            {{ form }}
-            {% csrf_token %}
-            <input type="submit" class="btn btn-success" value="Create Workout" >
+    <form action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
+        <div class="items-container">
+            <div class="item">
+                {{ form }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-success" value="Create Workout">
 
-    </div>
-</form>
+            </div>
+    </form>
 {% endblock %}

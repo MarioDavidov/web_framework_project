@@ -6,7 +6,7 @@ from app.views import home_page, edit_workout, workouts, \
 urlpatterns = [
     path('home/', home_page, name='home_page'),
     #path('create/', CreateWorkoutView.as_view(), name='create_workout'),
-    path('create/', create_workout, name='create_workout'),
+    path('create/', create_workout, name= 'create_workout'),
     path('edit/<int:pk>/', edit_workout, name='edit_workout'),
     path('delete/<int:pk>/', DeleteWorkoutView.as_view(), name='delete_workout'),
     #path('delete/<int:pk>/', delete_workout, name='delete_workout'),
