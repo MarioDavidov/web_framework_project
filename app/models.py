@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 from authentication.models import UserProfile
@@ -15,4 +16,14 @@ class Workout(models.Model):
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
+
+
+class ProgressPicture(models.Model):
+    date = models.DateField()
+    comment = models.TextField(max_length=100, blank=True)
+    progress_picture = models.ImageField(
+        upload_to='Progress_pics',
+        blank=True)
+
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 

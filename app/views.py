@@ -2,8 +2,9 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
+from app.forms.progress_picture import ProgressPictureForm
 from app.forms.workout import WorkoutForm
-from app.models import Workout
+from app.models import Workout, ProgressPicture
 from django.views import generic as views
 from authentication.views import user_profile
 
@@ -16,6 +17,7 @@ class WorkoutsView(views.ListView):
     template_name = 'workouts.html'
     context_object_name = 'workout'
 """
+
 def workouts(request,pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
     if Workout.objects.exists():
@@ -118,3 +120,59 @@ def details_workout(request ,pk):
 
         }
         return render(request, 'home/home_for_users.html', context)
+
+"""
+class ListProgressPicture(views.ListView):
+    model = ProgressPicture
+    template_name = 'progress_pictures/progress_pictures.html'
+    context_object_name = 'progress_picture'
+"""
+"""
+class CreateProgressPicture(views.CreateView):
+    template_name = 'progress_pictures/create_progress_picture.html'
+    model = ProgressPicture
+    form_class =  ProgressPictureForm
+"""
+
+
+def progres_picture(request,pk=None):
+    user = request.user if pk is None else User.objects.get(pk=pk)
+    if ProgressPicture.objects.exists():
+        progress_picture = ProgressPicture.objects.all()
+        context ={
+            'progress_picture': progress_picture,
+            'profile_user': user,
+            'profile': user.userprofile,
+            'progress_picture_user': user.userprofile.progresspicture_set.all(),
+
+        }
+        return render(request, 'progress_pictures/progress_pictures.html',context)
+    else:
+        progress_picture = ProgressPicture.objects.all()
+        context= {
+            'progres_picture': progress_picture,
+        }
+        return render(request, 'progress_pictures/progress_pictures.html',context)
+
+
+
+def create_progress_picture(request):
+    if request.method == 'GET':
+        context = {
+            'form_pic': ProgressPictureForm(),
+        }
+        return render(request, 'progress_pictures/create_progress_picture.html', context)
+    else:
+        form = ProgressPictureForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('progress_picture')
+        context = {
+            'form_pic': ProgressPictureForm(),
+        }
+        return render(request, 'progress_pictures/progress_pictures.html', context)
+
+class DeletePictureView(views.DeleteView):
+    model = ProgressPicture
+    template_name = 'progress_pictures/delete_progress_pic.html'
+    success_url = reverse_lazy('progress_picture')

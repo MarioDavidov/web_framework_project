@@ -8,7 +8,7 @@ class WorkoutForm(forms.ModelForm):
         fields = '__all__'
 
 
-class DeleteRecipe(WorkoutForm):
+class DeleteWorkout(WorkoutForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

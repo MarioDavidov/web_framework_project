@@ -1,0 +1,18 @@
+{% extends 'create_workout.html' %}
+
+
+<body>
+{% block site_content %}
+<form action="{% url 'create_progress_pictures' %}" method="post" enctype="multipart/form-data">
+                     <div class="items-container">
+                         <div class="item">
+                             <form action="{% url 'create_progress_pictures'%}" method="post" enctype="multipart/form-data">
+                                    {{ form_pic }}
+                                    {% csrf_token %}
+                                    <button >Upload Progress Picture</button>
+                             </form>
+                         </div>
+                     </div>
+                </form>
+{% endblock %}
+</body>

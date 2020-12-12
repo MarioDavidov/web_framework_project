@@ -26,7 +26,7 @@
                         Hello ,{{profile_user.username}}
                     </div>
                 </h1>
-{{ w }}
+
                 {% if profile.profile_pic %}
                     <img src="{{ profile.profile_pic.url }}" width="250" height="200" alt="">
                 {% else %}
@@ -38,13 +38,15 @@
                              <form action="{% url 'current user profile'%}" method="post" enctype="multipart/form-data">
                                 {{form}}
                                 {% csrf_token %}
-                                <button type="button" class="btn btn-dark">Upload Profile Picture</button>
+                                <button>Upload Profile Picture</button>
                              </form>
+
                          </div>
                      </div>
                 </form>
 
                  <a href="{%  url 'create_workout' %}" class="btn btn-success">Create workout</a>
+                 <a href="{%  url 'create_progress_pictures' %}" class="btn btn-success">Create progress picture</a>
             </div>
         </div>
 </center>

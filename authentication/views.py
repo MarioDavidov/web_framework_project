@@ -16,6 +16,7 @@ def user_profile(request, pk =None):
             'profile_user': user,
             'profile': user.userprofile,
             'workouts_user':user.userprofile.workout_set.all(),
+            'progress_picture_user': user.userprofile.progresspicture_set.all(),
             'form': ProfileForm(),
         }
         return render(request, 'home/home_for_users.html',context)

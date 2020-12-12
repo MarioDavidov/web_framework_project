@@ -4,8 +4,8 @@
         <a class="nav-link" href="{% url 'current user profile' %}"><div style="color: #996633"> Home</div></a>
         <a class="nav-link" href="{% url 'current user profile' %}"><div style="color: #996633"> Username: {{ profile_user.username}}</div></a>
         <a class="nav-link" href="{% url 'workouts' %}"><div style="color: #996633"> Workouts</div></a>
-        <a class="nav-link" href="#"><div style="color: #996633"> Weight</div></a>
-        <a class="nav-link" href="#"><div style="color: #996633"> Progress pictures</div></a>
+
+        <a class="nav-link" href="{% url 'progress_picture' %}"><div style="color: #996633"> Progress pictures</div></a>
         <a class="nav-link" href="{% url 'logout_user' %}"><div style="color: #996633"> Logout</div></a>
 
     </nav>
