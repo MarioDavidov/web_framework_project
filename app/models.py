@@ -17,7 +17,6 @@ class Workout(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
 
-
 class ProgressPicture(models.Model):
     date = models.DateField()
     comment = models.TextField(max_length=100, blank=True)
@@ -26,4 +25,3 @@ class ProgressPicture(models.Model):
         blank=True)
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-

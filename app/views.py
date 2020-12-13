@@ -11,6 +11,8 @@ from authentication.views import user_profile
 
 def home_page(request):
     return render(request, 'home/home_for_users.html')
+
+
 """
 class WorkoutsView(views.ListView):
     model = Workout
@@ -18,28 +20,29 @@ class WorkoutsView(views.ListView):
     context_object_name = 'workout'
 """
 
-def workouts(request,pk=None):
+
+def workouts(request, pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
     if Workout.objects.exists():
         workout = Workout.objects.all()
-        context ={
+        context = {
             'workout': workout,
             'profile_user': user,
             'profile': user.userprofile,
             'workouts_user': user.userprofile.workout_set.all(),
         }
-        return render(request, 'workouts.html',context)
+        return render(request, 'workouts.html', context)
     else:
         workout = Workout.objects.all()
-        context= {
+        context = {
             'workout': workout
         }
-        return render(request, 'workouts.html',context)
+        return render(request, 'workouts.html', context)
 
 
-#NxBhej_4g+KBwasdasd
-#$AU2QdtJt5re7mQ&
-#NxBhej_4g+KBwasdasd
+# NxBhej_4g+KBwasdasd
+# $AU2QdtJt5re7mQ&
+# NxBhej_4g+KBwasdasd
 
 def create_workout(request):
     if request.method == 'GET':
@@ -55,7 +58,9 @@ def create_workout(request):
         context = {
             'form': WorkoutForm(),
         }
-        return render(request, 'home/home_for_users.html', context)
+        return render(request, 'workouts.html', context)
+
+
 """
 class CreateWorkoutView(views.CreateView):
     template_name = 'create_workout.html'
@@ -73,7 +78,8 @@ class CreateWorkoutView(views.CreateView):
         return super().form_valid(form)
 """
 
-def edit_workout(request,pk):
+
+def edit_workout(request, pk):
     workout = Workout.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
@@ -94,17 +100,14 @@ def edit_workout(request,pk):
         }
         return render(request, 'workouts.html', context)
 
+
 class DeleteWorkoutView(views.DeleteView):
     model = Workout
     template_name = 'delete_workout.html'
     success_url = reverse_lazy('workouts')
 
-"""
-def delete_workout(request):
-    pass
-"""
 
-def details_workout(request ,pk):
+def details_workout(request, pk):
     workout = Workout.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
@@ -121,6 +124,9 @@ def details_workout(request ,pk):
         }
         return render(request, 'home/home_for_users.html', context)
 
+
+"""PICTURES VIESW START FROM HERE"""
+
 """
 class ListProgressPicture(views.ListView):
     model = ProgressPicture
@@ -135,25 +141,24 @@ class CreateProgressPicture(views.CreateView):
 """
 
 
-def progres_picture(request,pk=None):
+def progres_picture(request, pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
     if ProgressPicture.objects.exists():
         progress_picture = ProgressPicture.objects.all()
-        context ={
+        context = {
             'progress_picture': progress_picture,
             'profile_user': user,
             'profile': user.userprofile,
             'progress_picture_user': user.userprofile.progresspicture_set.all(),
 
         }
-        return render(request, 'progress_pictures/progress_pictures.html',context)
+        return render(request, 'progress_pictures/progress_pictures.html', context)
     else:
         progress_picture = ProgressPicture.objects.all()
-        context= {
+        context = {
             'progres_picture': progress_picture,
         }
-        return render(request, 'progress_pictures/progress_pictures.html',context)
-
+        return render(request, 'progress_pictures/progress_pictures.html', context)
 
 
 def create_progress_picture(request):
@@ -171,6 +176,7 @@ def create_progress_picture(request):
             'form_pic': ProgressPictureForm(),
         }
         return render(request, 'progress_pictures/progress_pictures.html', context)
+
 
 class DeletePictureView(views.DeleteView):
     model = ProgressPicture

@@ -1028,6 +1028,7 @@ sequence|table|33817|33819|1
     </sequence>
     <table id="46" parent="21" name="app_workout">
       <ObjectId>33789</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1017</StateNumber>
     </table>

@@ -2,7 +2,7 @@
 <div lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Workout App</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,11 @@
 </div>
 </div>
 <body>
+
 {% include 'shared/site_navigation.html' %}
+
+{% block site_content %}
+
 <center>
     <div class="container
             <div class="row">
@@ -38,7 +42,8 @@
                              <form action="{% url 'current user profile'%}" method="post" enctype="multipart/form-data">
                                 {{form}}
                                 {% csrf_token %}
-                                <button>Upload Profile Picture</button>
+                                    <input type="submit" class="btn btn-secondary" value="upload">
+                                    <!--<button>Upload Profile Picture</button>-->
                              </form>
 
                          </div>
@@ -47,9 +52,13 @@
 
                  <a href="{%  url 'create_workout' %}" class="btn btn-success">Create workout</a>
                  <a href="{%  url 'create_progress_pictures' %}" class="btn btn-success">Create progress picture</a>
+
             </div>
         </div>
+
 </center>
+
+{% endblock %}
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
