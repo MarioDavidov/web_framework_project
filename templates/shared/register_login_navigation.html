@@ -1,8 +1,17 @@
-<nav class="navbar navbar-light" style="background-color: #B0E0E6;">
-        <nav class="nav">
-            <a class="nav-link" href="{% url 'register_user' %}"><div style="color: #996633">Workout tracker</div></a>
-            <a class="nav-link" href="{% url 'register_user' %}"><div style="color: #996633">Register</div></a>
-            <a class="nav-link" href="{% url 'login_user' %}"><div style="color: #996633">Login</div></a>
+<link rel="stylesheet" href="/static/Public_part.css">
 
+<header>
+        <nav class="nav">
+            <ul class="ul-nav">
+                <li class="li-nav">
+                    <a href="{% url 'register_user' %}">Workout tracker</a>
+                </li>
+                <li class="li-nav">
+                    <a href="{% url 'register_user' %}">Register</a>
+                </li>
+                <li class="li-nav">
+                    <a href="{% url 'login_user' %}">Login</a>
+                </li>
+            </ul>
         </nav>
-</nav>
+     </header>

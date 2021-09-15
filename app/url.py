@@ -1,7 +1,8 @@
 from django.urls import path
 
 from app.views import home_page, edit_workout, workouts, \
-    create_workout, DeleteWorkoutView, details_workout, create_progress_picture, progres_picture, DeletePictureView
+    DeleteWorkoutView, details_workout, create_progress_picture, progres_picture, DeletePictureView, \
+    create_workout
 
 urlpatterns = [
     path('home/', home_page, name='home_page'),

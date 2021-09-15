@@ -7,6 +7,8 @@ class WorkoutForm(forms.ModelForm):
         model = Workout
         fields = '__all__'
 
+        #exclude = ('user',)
+
 
 class DeleteWorkout(WorkoutForm):
     def __init__(self, *args, **kwargs):
@@ -15,3 +17,5 @@ class DeleteWorkout(WorkoutForm):
         for (_, field) in self.fields.items():
             field.widget.attrs['disabled'] = True
             field.widget.attrs['readonly'] = True
+
+
