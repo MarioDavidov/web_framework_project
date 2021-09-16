@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 body {
-    background: #F0F8FF;
+    background: #FFFAFA;
     font-family: 'cursive', "Berlin Sans FB";
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ div.items-container {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px;
-    color: 		#996633;
+    color: #996633;
 }
 
 div.item {

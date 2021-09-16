@@ -1,0 +1,29 @@
+.register-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #F0F8FF;
+}
+.form-section{
+    width: 250px;
+    border: 1px solid #996633;
+    background: #B0E0E6;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    margin-top: 8px;
+    padding: 4px;
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: white;
+    font-family: 'cursive', "Berlin Sans FB";
+    font-size: 18px;
+}
+.button:hover{
+    background: #059862;
+}
