@@ -1,0 +1,37 @@
+.home-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F0F8FF;
+}
+
+.img-wrapper{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #996633;
+    border-radius: 4px;
+    margin: 5px;
+    margin-bottom: 15px;
+
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+.form-wrapper{
+    background: #B0E0E6;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #996633;
+    border-radius: 4px;
+}
+.inside-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-btn-wrapper{
+    align-self: center;
+}
