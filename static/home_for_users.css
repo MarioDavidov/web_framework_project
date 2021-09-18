@@ -1,14 +1,31 @@
+.header-wrapper{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: #F0F8FF;
+}
 .home-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    background: #F0F8FF;
+}
+.profile-pic-side{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #F0F8FF;
+    margin-right: 10px;
 }
-
+.btn-side{
+    margin-left: 10px;
+}
 .img-wrapper{
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 170px;
     border: 2px solid #996633;
     border-radius: 4px;
     margin: 5px;
@@ -28,10 +45,45 @@
 }
 .inside-form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .form-btn-wrapper{
     align-self: center;
 }
+.profile-btn{
+    margin-left: -50px;
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: white;
+    font-family: 'cursive', "Berlin Sans FB";
+    font-size: 16px;;
+}
+.profile-btn:hover{
+    background: #059862;
+}
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.create-wo-btn{
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: white;
+    font-family: 'cursive', "Berlin Sans FB";
+    font-size: 16px;
+    padding: 6px;
+    text-decoration: none;
+    text-align: center;
+
+}
+.create-wo-btn:hover{
+    background: #059862;
+}
+.margin-for-btn{
+    margin-top: 5px;
+}
+

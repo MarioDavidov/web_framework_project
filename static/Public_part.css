@@ -25,7 +25,7 @@ header{
     color: #996633;
 }
 
-a:hover{
+.nav-li-va:hover{
     border-bottom: 4px double #996633;
 }
 body{

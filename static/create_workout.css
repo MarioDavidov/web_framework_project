@@ -1,0 +1,22 @@
+.form-wrapper-CW{
+    background: #F0F8FF;
+    display: flex;
+    justify-content: center;
+}
+.form-CW{
+    border: 1px solid #996633;
+    border-radius: 4px;
+    padding: 16px;
+    background: #B0E0E6;
+    margin-top: 15px;
+}
+.cw-icon{
+    width: 120px;
+    margin-bottom: -25px;
+    margin-top: -40px;
+    margin-left: 39px;
+}
+.cw-icon img{
+    width: 100%;
+}
+

@@ -1,0 +1,57 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #F0F8FF;
+}
+
+.workout-wrapper{
+    border: 2px solid #996633;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #B0E0E6;
+    padding: 12px;
+    margin: 16px;
+}
+.workout-card{
+    border-right: 3px dotted #996633;
+    margin-right: 3px;
+}
+.buttons-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 3px;
+}
+
+.delete-btn{
+    background: red;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: white;
+    font-family: 'cursive', "Berlin Sans FB";
+    font-size: 16px;
+    padding: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+.delete-btn:hover{
+    background: darkred;
+
+}
+.details{
+    background: blue !important;
+}
+.details:hover{
+    background: darkblue !important;
+}
+
+.edit{
+    background: brown !important;
+}
+
+.edit:hover{
+    background: saddlebrown !important;
+}

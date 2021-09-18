@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Workout tracker</title>
@@ -16,32 +16,37 @@
 {% include 'shared/site_navigation.html' %}
 
 {% block site_content %}
+    <section class="header-wrapper">
+        <h1>Hello ,{{profile_user.username}}</h1>
+    </section>
     <main class="home-wrapper">
-            <section class="header-wrapper">
-                <h1>Hello ,{{profile_user.username}}</h1>
-            </section>
-            <section class="img-wrapper">
-                {% if profile.profile_pic %}
-                    <img src="{{ profile.profile_pic.url }}" alt="error">
-                {% else %}
-                    <img src="https://cdn5.vectorstock.com/i/thumb-large/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.jpg" alt="">
-                {% endif %}
-            </section>
-            <section class="form-wrapper">
-                <form class="inside-form" action="{% url 'current user profile' %}" method="post" enctype="multipart/form-data">
-                    <article class="form-btn-wrapper">
-                            {{form}}
-                        {% csrf_token %}
-                    </article>
-                    <article class="btn-wrapper">
-                        <input type="submit" class="btn btn-secondary" value="upload">
-                    </article>
-                </form>
-            </section>
+
+    <article class="profile-pic-side">
+        <section class="img-wrapper">
+            {% if profile.profile_pic %}
+                <img src="{{ profile.profile_pic.url }}" alt="error">
+            {% else %}
+                <img src="https://cdn5.vectorstock.com/i/thumb-large/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.jpg" alt="">
+            {% endif %}
+        </section>
+        <section class="form-wrapper">
+            <form class="inside-form" action="{% url 'current user profile' %}" method="post" enctype="multipart/form-data">
+                <article class="form-btn-wrapper">
+                    {{form}}
+                    {% csrf_token %}
+                </article>
+                <article class="btn-wrapper">
+                    <input type="submit" class="profile-btn" value="upload">
+                </article>
+            </form>
+        </section>
+    </article>
+    <article class="btn-side">
             <section class="button-wrapper">
-                <a href="{%  url 'create_workout' %}" class="btn btn-success">Create workout</a>
-                <a href="{%  url 'create_progress_pictures' %}" class="btn btn-success">Create progress picture</a>
+                <a href="{%  url 'create_workout' %}" class="create-wo-btn"    >Create workout</a>
+                <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn margin-for-btn">Create progress picture</a>
             </section>
+   </article>
 </main>
 {% endblock %}
 

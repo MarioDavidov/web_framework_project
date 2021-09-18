@@ -3,19 +3,19 @@
     <nav class="nav">
         <ul class="ul-nav">
             <li class="li-nav">
-                <a href="{% url 'current user profile' %}"> Home</a>
+                <a class="nav-li-va" href="{% url 'current user profile' %}"> Home</a>
             </li>
             <li class="li-nav">
-                <a href="{% url 'current user profile' %}">Username: {{ profile_user.username}}</a>
+                <a class="nav-li-va" href="{% url 'current user profile' %}">{{ profile_user.username}}</a>
             </li>
             <li class="li-nav">
-                <a href="{% url 'workouts' %}">Workouts</a>
+                <a class="nav-li-va" href="{% url 'workouts' %}">Workouts</a>
             </li>
             <li class="li-nav">
-                <a href="{% url 'progress_picture' %}">Progress pictures</a>
+                <a class="nav-li-va" href="{% url 'progress_picture' %}">Progress pictures</a>
             </li>
             <li class="li-nav">
-                <a href="{% url 'logout_user' %}">Logout</a>
+                <a class="nav-li-va" href="{% url 'logout_user' %}">Logout</a>
             </li>
         </ul>
     </nav>
