@@ -6,7 +6,7 @@
                 <a class="nav-li-va" href="{% url 'current user profile' %}"> Home</a>
             </li>
             <li class="li-nav">
-                <a class="nav-li-va" href="{% url 'current user profile' %}">{{ profile_user.username}}</a>
+                <a id="user_name" class="nav-li-va" href="{% url 'current user profile' %}">{{ profile_user.username}}</a>
             </li>
             <li class="li-nav">
                 <a class="nav-li-va" href="{% url 'workouts' %}">Workouts</a>

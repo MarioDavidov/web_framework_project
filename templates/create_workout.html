@@ -5,13 +5,15 @@
 
 
 <body>
+
 {% block site_content %}
+    <script>
+        let username = document.getElementById('id_user').innerHTML = {{ profile_user.username }}
+    </script>
         <article class="header-wrapper">
             <h1>Create Workout</h1>
         </article>
-             <script>
-                let username = document.getElementById('id_user').innerHTML = {{ profile_user.username }}
-            </script>
+
     <section class="form-wrapper-CW">
 
         <form class="form-CW" action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
