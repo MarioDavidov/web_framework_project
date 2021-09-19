@@ -23,6 +23,9 @@
     </article>
 
     <section class="form-section">
+        <article class="reg-icon-wrapper">
+            <img src="https://cdn1.iconfinder.com/data/icons/common-ui/48/key_register_login_signin_enter-512.png" alt="error"
+        </article>
         <form method="post" action="{% url 'register_user' %}" enctype="multipart/form-data">
             {{form}}
             {% csrf_token %}

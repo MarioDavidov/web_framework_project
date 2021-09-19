@@ -9,21 +9,21 @@
         <h1>Create Progress Picture</h1>
     </article>
     <section class="form-wrapper-cpp">
-    <form class="form-cpp" action="{% url 'create_progress_pictures' %}" method="post" enctype="multipart/form-data">
-        <article class="pp-icon">
-            <img src="https://cdn2.iconfinder.com/data/icons/health-19/64/workout-schedule-health-exercise-gym-fitness-512.png" alt="error">
-        </article>
-        <label class="inputs" for="exercise">Date: {{ form_pic.date }}</label><br>
-            <br>
+        <form class="form-cpp" action="{% url 'create_progress_pictures' %}" method="post" enctype="multipart/form-data">
+            <article class="pp-icon">
+                <img src="https://cdn2.iconfinder.com/data/icons/health-19/64/workout-schedule-health-exercise-gym-fitness-512.png" alt="error">
+            </article>
+            <label class="inputs" for="exercise">Date: {{ form_pic.date }}</label><br>
+                <br>
             <label class="inputs" for="exercise">Comment: {{ form_pic.comment }}</label><br>
-            <br>
+                <br>
             <label class="inputs" for="exercise">User: {{ form_pic.user }}</label><br>
-            <br>
+                <br>
             <label class="inputs" for="exercise">Upload picture: {{ form_pic.progress_picture }}</label><br>
-            <br>
-        {% csrf_token %}
-        <input type="submit" class="create-wo-btn" value="upload">
-    </form>
+                <br>
+            {% csrf_token %}
+            <input type="submit" class="create-wo-btn" value="upload">
+        </form>
     </section>
 {% endblock %}
 </body>

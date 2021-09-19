@@ -25,3 +25,11 @@
 .button:hover{
     background: #059862;
 }
+.reg-icon-wrapper{
+    width: 250px;
+
+}
+.reg-icon-wrapper img{
+    width: 25%;
+    margin-left: 90px;
+}

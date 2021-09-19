@@ -26,19 +26,11 @@
     margin-left: 3px;
 }
 
-.delete-btn{
-    background: red;
-    border: 1px solid #4CAF50;
-    border-radius: 4px;
-    color: white;
-    font-family: 'cursive', "Berlin Sans FB";
-    font-size: 16px;
-    padding: 6px;
-    text-decoration: none;
-    text-align: center;
+.delete{
+    background: red !important;
 }
-.delete-btn:hover{
-    background: darkred;
+.delete:hover{
+    background: darkred !important;
 
 }
 .details{

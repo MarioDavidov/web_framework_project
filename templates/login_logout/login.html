@@ -21,6 +21,7 @@
     </article>
 
     <section class="form-section">
+
         <form method="post" action="{% url 'login_user' %}">
             <p>Username:</p> {{login_form.username}}
             <p>Password:</p> {{login_form.password}}
@@ -29,6 +30,9 @@
                     <button type="submit" class="button">Login</button>
                 </article>
             </form>
+        <article class="login-icon-wrapper">
+            <img src="https://cdn1.iconfinder.com/data/icons/materia-arrows-symbols-vol-8/24/018_319_door_enter_login_signin-512.png" alt="error">
+        </article>
     </section>
 
 </section>

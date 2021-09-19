@@ -13,6 +13,7 @@
     border-radius: 4px;
     display: flex;
     justify-content: center;
+
 }
 .button{
     margin-top: 8px;
@@ -26,4 +27,11 @@
 }
 .button:hover{
     background: #059862;
+}
+.login-icon-wrapper{
+    width: 250px;
+}
+.login-icon-wrapper img{
+    width: 100%;
+    margin-top: 41px;
 }

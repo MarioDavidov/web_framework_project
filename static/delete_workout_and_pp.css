@@ -1,0 +1,29 @@
+.delete-pp-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #F0F8FF;
+}
+.delete-pp-form{
+    display: flex;
+    border: 1px solid #996633;
+    border-radius: 4px;
+    padding: 14px;
+    background: #B0E0E6;
+}
+.delete-side{
+    display: flex;
+    margin-right: 10px;
+    border-right: 1px dotted #996633;
+}
+.back-side{
+    display: flex;
+    margin-left: 10px;
+}
+.border-section{
+    border-right: 2px dotted #996633;
+}
+.create-wo-btn{
+    padding: 12px !important;
+}
+
