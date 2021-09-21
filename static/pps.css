@@ -1,0 +1,42 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #F0F8FF;
+}
+.pp-wrapper{
+    border: 2px solid #996633;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #B0E0E6;
+    padding: 12px;
+    margin: 16px;
+}
+.delete{
+    background: red !important;
+}
+.delete:hover{
+    background: darkred !important;
+
+}
+.pic-wrapper{
+    border: 1px solid #996633;
+    border-radius: 4px;
+    width: 350px;
+    height: 350px;
+}
+.pic-wrapper img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.textarea-pps{
+    border: 1px solid #996633;
+    border-radius: 4px;
+    background: #F0F8FF;
+    outline: #F0F8FF;
+    resize: none;
+    margin-bottom: 16px;
+}

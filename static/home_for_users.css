@@ -1,3 +1,6 @@
+.main-body{
+    background: #F0F8FF;
+}
 .header-wrapper{
     margin-top: 0;
     margin-bottom: 0;
@@ -11,7 +14,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: normal;
-    background: #F0F8FF;
+    background: #B0E0E6;
+    border: 2px solid #996633;
+    border-radius: 4px;
+    padding: 35px 18px;
+    width: 600px;
+    margin-left: 450px;
 }
 .profile-pic-side{
     display: flex;
@@ -19,6 +27,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    border-right: 2px dotted #996633;
 }
 .btn-side{
     margin-left: 10px;

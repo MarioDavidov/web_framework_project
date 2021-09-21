@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/static/pps.css">
+
 {% extends 'home/home_for_users.html' %}
 
 
@@ -5,37 +7,36 @@
 
 
 {% block site_content %}
-
     <body>
-    <center>
-        <div style="color: #996633">
-            <h1>PROGRESS PICTURES</h1>
-        </div>
-    </center>
-    {% if not progress_picture_user %}
-        <center>
-            <div style="color: #996633">
-                <h1>NO PROGRESS PICTURE TO SHOW</h1>
-                 <a href="{%  url 'create_progress_pictures' %}" class="btn btn-success">Create progress picture</a>
-            </div>
-        </center>
-    {% endif %}
-
+            <article class="header-wrapper">
+                <h1>PROGRESS PICTURES</h1>
+            </article>
+            <article class="header-wrapper">
+                {% if not progress_picture_user %}
+                    <h1>NO PROGRESS PICTURE TO SHOW</h1>
+                    <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn">Create progress picture</a>
+                {% endif %}
+             </article>
+<main class="main">
     {% for pic in progress_picture_user %}
-        <div class="items-container">
-            <div class="item">
+            <section class="pp-wrapper">
                 <h4>Date: {{ pic.date }}</h4>
-                <img src="{{ pic.progress_picture.url }}" width="500" height="600" alt="">
-                <h4>Comment: {{ pic.comment }}</h4>
-                <a href="{% url 'delete_progress_picture' pic.id %}" class="btn btn-danger">Delete picture</a>
-
-            </div>
-        </div>
-        <center>
-             <a href="{%  url 'create_progress_pictures' %}" class="btn btn-success">Create progress picture</a>
-         </center>
+                <article class="pic-wrapper">
+                    <img src="{{ pic.progress_picture.url }}" width="500" height="600" alt="">
+                </article>
+                <p>Comment:</p>
+                <article class="textarea-wrapper">
+                    <textarea readonly class="textarea-pps">
+                        {{ pic.comment }}
+                    </textarea>
+                </article>
+                <article class="buttons-wrapper">
+                    <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn">Create progress picture</a>
+                    <a href="{% url 'delete_progress_picture' pic.id %}" class="create-wo-btn delete">Delete picture</a>
+                </article>
+            </section>
     {% endfor %}
-
+</main>
 
 {% endblock %}
 
