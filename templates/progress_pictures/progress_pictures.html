@@ -8,15 +8,17 @@
 
 {% block site_content %}
     <body>
-            <article class="header-wrapper">
+            <article class="header-wrapper pps-header">
                 <h1>PROGRESS PICTURES</h1>
             </article>
-            <article class="header-wrapper">
+
                 {% if not progress_picture_user %}
-                    <h1>NO PROGRESS PICTURE TO SHOW</h1>
-                    <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn">Create progress picture</a>
+                    <article class="header-wrapper">
+                        <h1>NO PROGRESS PICTURE TO SHOW</h1>
+                        <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn">Create progress picture</a>
+                    </article>
                 {% endif %}
-             </article>
+
 <main class="main">
     {% for pic in progress_picture_user %}
             <section class="pp-wrapper">

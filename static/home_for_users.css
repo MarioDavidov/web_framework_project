@@ -18,8 +18,7 @@
     border: 2px solid #996633;
     border-radius: 4px;
     padding: 35px 18px;
-    width: 600px;
-    margin-left: 450px;
+
 }
 .profile-pic-side{
     display: flex;
@@ -31,6 +30,9 @@
 }
 .btn-side{
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .img-wrapper{
     width: 160px;
@@ -76,6 +78,8 @@
 .button-wrapper{
     display: flex;
     flex-direction: column;
+
+
 }
 .create-wo-btn{
     background: #4CAF50;
@@ -95,4 +99,16 @@
 .margin-for-btn{
     margin-top: 5px;
 }
+.its-funny-but-is-main-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.stats-side{
+    border-bottom: 2px dotted #996633;
+    margin-bottom: 12px;
+}
+.profile-stats{
+    color: black;
+}
+
 

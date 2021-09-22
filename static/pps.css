@@ -40,3 +40,6 @@
     resize: none;
     margin-bottom: 16px;
 }
+.pps-header{
+    padding-bottom: 0 !important;
+}

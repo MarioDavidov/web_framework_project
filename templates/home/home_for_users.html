@@ -19,35 +19,47 @@
     <section class="header-wrapper">
         <h1>Hello ,{{profile_user.username}}</h1>
     </section>
-    <main class="home-wrapper">
 
-    <article class="profile-pic-side">
-        <section class="img-wrapper">
-            {% if profile.profile_pic %}
-                <img src="{{ profile.profile_pic.url }}" alt="error">
-            {% else %}
-                <img src="https://cdn5.vectorstock.com/i/thumb-large/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.jpg" alt="">
-            {% endif %}
-        </section>
-        <section class="form-wrapper">
-            <form class="inside-form" action="{% url 'current user profile' %}" method="post" enctype="multipart/form-data">
-                <article class="form-btn-wrapper">
-                    {{form}}
-                    {% csrf_token %}
-                </article>
-                <article class="btn-wrapper">
-                    <input type="submit" class="profile-btn" value="upload">
-                </article>
-            </form>
-        </section>
-    </article>
-    <article class="btn-side">
-            <section class="button-wrapper">
-                <a href="{%  url 'create_workout' %}" class="create-wo-btn"    >Create workout</a>
-                <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn margin-for-btn">Create progress picture</a>
+    <main class="its-funny-but-is-main-wrapper">
+        <section class="home-wrapper">
+
+        <article class="profile-pic-side">
+            <section class="img-wrapper">
+                {% if profile.profile_pic %}
+                    <img src="{{ profile.profile_pic.url }}" alt="error">
+                {% else %}
+                    <img src="https://cdn5.vectorstock.com/i/thumb-large/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.jpg" alt="">
+                {% endif %}
             </section>
-   </article>
-</main>
+
+            <section class="form-wrapper">
+                <form class="inside-form" action="{% url 'current user profile' %}" method="post" enctype="multipart/form-data">
+                    <article class="form-btn-wrapper">
+                        {{form}}
+                        {% csrf_token %}
+                    </article>
+                    <article class="btn-wrapper">
+                        <input type="submit" class="profile-btn" value="upload">
+                    </article>
+                </form>
+            </section>
+        </article>
+            <article class="btn-side">
+                <section class="stats-side">
+                    <p>Username: <span class="profile-stats">{{ profile_user    }}</span></p>
+                    <p>Last login: <span class="profile-stats">{{ profile_user.last_login }}</span></p>
+                    <p>Workouts: <span class="profile-stats">{{ workouts_user.count }}</span></p>
+                    <p>Progress Pictures: <span class="profile-stats">{{ progress_picture_user.count }}</span></p>
+                </section>
+                <section class="button-wrapper">
+                    <a href="{%  url 'create_workout' %}" class="create-wo-btn">Create workout</a>
+                    <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn margin-for-btn">Create progress picture</a>
+                    <a href="#" class="create-wo-btn margin-for-btn">Add weight</a>
+                </section>
+
+            </article>
+        </section>
+    </main>
 {% endblock %}
 
 

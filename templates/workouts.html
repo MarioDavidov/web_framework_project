@@ -10,15 +10,17 @@
         <h1>WORKOUTS</h1>
     </article>
 
-    <article class="header-wrapper">
+
         {% if not workouts_user %}
-            <h1>NO WORKOUTS TO SHOW</h1>
-             <a href="{%  url 'create_workout' %}" class="create-wo-btn">Create workout</a>
+            <article class="header-wrapper">
+                <h1>NO WORKOUTS TO SHOW</h1>
+                <a href="{%  url 'create_workout' %}" class="create-wo-btn">Create workout</a>
+             </article>
         {% endif %}
-    </article>
+
     <main class="main">
         {% for work in workouts_user %}
-{#            <p>{{ workouts_user.count }}</p>#}
+
             <section class="workout-wrapper">
                 <section class="workout-card">
                         <h2>{{ work.date }}</h2>
