@@ -1,30 +1,46 @@
+<link rel="stylesheet" href="/static/create_workout.css">
 {% extends 'workouts.html' %}
 
 
 
 <body>
 {% block site_content %}
-     <div class="container">
-     <center>
-        <div style="color: #996633">
-            <h1>Edit this workout?</h1>
-        </div>
-     </center>
-         <ul class="list-horizontal list-item">
-            <div class="items-container">
-                <div class="item">
-                    <form method="post">
-                        {{ form }}
-                        <input type="submit" class="btn btn-secondary" value="Edit">
+    <script>
+        let username = document.getElementById('id_user').innerHTML = {{ profile_user.username }}
+    </script>
+        <article class="header-wrapper">
+            <h1>Create Workout</h1>
+        </article>
 
-                        {% csrf_token %}
-                    </form>
-                    <center>
-                     <a href="{%  url 'workouts' %}" class="btn btn-success">Go back</a>
-                    </center>
-                </div>
-            </div>
-         </ul>
-     </div>
+    <section class="form-wrapper-CW">
+
+        <form class="form-CW" method="POST">
+             <article class="cw-icon">
+                <img src="https://cdn2.iconfinder.com/data/icons/outline-landing-page/100/outline4_ready-17-512.png" alt="error">
+             </article>
+            <label class="inputs" for="date">Date: {{ form.date }}</label><br>
+            <br>
+            <label class="inputs" for="title">Title: {{ form.tittle }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.first_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.second_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.third_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.fourth_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.fifth_exercise }}</label><br>
+
+            <p id="user">User: {{ form.user }}</p>
+            <input type="submit" class="create-wo-btn" value="edit Workout">
+            <a href="{%  url 'workouts' %}" class="create-wo-btn">Go back</a>
+            {% csrf_token %}
+
+        </form>
+
+    </section>
 {% endblock %}
 </body>
+
+

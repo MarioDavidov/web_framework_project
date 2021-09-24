@@ -1,0 +1,7 @@
+.details-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.workout-card{
+    border-right: none !important;
+}

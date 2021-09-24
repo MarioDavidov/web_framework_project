@@ -1,32 +1,25 @@
+<link rel="stylesheet" href="/static/workouts.css">
+<link rel="stylesheet" href="/static/workout_details.css">
 {% extends 'workouts.html' %}
 
 <body>
 {% block site_content %}
-     <div class="container">
-     <center>
-        <div style="color: #996633">
-            <h1>Details about this workout?</h1>
-        </div>
-     </center>
-         <ul class="list-horizontal list-item">
-            <div class="items-container">
-                <div class="item">
-                    <form method="post">
-                        <h2>Tittle: {{ workout.tittle }}</h2>
-                        <p>Date: {{ workout.date }}</p>
-                        <p>First exercise: {{ workout.first_exercise }}</p>
-                        <p>Second exercise: {{ workout.second_exercise }}</p>
-                        <p>Third exercise: {{ workout.third_exercise }}</p>
-                        <p>Fourth exercise: {{ workout.fourth_exercise }}</p>
-                        <p>Fifth exercise: {{ workout.fifth_exercise }}</p>
-                        <p>Workout notes: {{ workout.notes }}</p>
-                        <a href="{% url 'workouts' %}" class="btn btn-warning">Go back to workouts</a>
-
-                        {% csrf_token %}
-                    </form>
-                </div>
-            </div>
-         </ul>
-     </div>
+    <article class="header-wrapper">
+        <h1>Workout Details</h1>
+    </article>
+    <main class="details-wrapper">
+       <section class="workout-wrapper">
+           <section class="workout-card">
+               <h2>Tittle: {{ workout.tittle }}</h2>
+               <p>Date: {{ workout.date }}</p>
+               <p>First exercise: {{ workout.first_exercise }}</p>
+               <p>Second exercise: {{ workout.second_exercise }}</p>
+               <p>Third exercise: {{ workout.third_exercise }}</p>
+               <p>Fourth exercise: {{ workout.fourth_exercise }}</p>
+               <p>Fifth exercise: {{ workout.fifth_exercise }}</p>
+               <a href="{% url 'workouts' %}" class="create-wo-btn">Go back to workouts</a>
+         </section>
+       </section>
+    </main>
 {% endblock %}
 </body>
