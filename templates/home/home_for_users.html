@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/static/home_for_users.css">
 </head>
 
-<body class="main-body">
-
+<body class="content-wrapp">
+<section class="main-body">
 {% include 'shared/site_navigation.html' %}
 
 {% block site_content %}
@@ -60,8 +60,10 @@
             </article>
         </section>
     </main>
+
 {% endblock %}
 
-
+{% include 'shared/footer.html' %}
+</section>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="/static/footer.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<footer class="footer">
+    <section class="footer-first-part">
+        <article class="newsletter-art">
+            <p class="article-headers">NEWSLETTER SIGNUP</p>
+            <form>
+                <label for="news"></label><br>
+                <input class="email-input" type="text" placeholder="Enter Your Email Adress" id="news" name="news">
+                <p>I want content for...</p>
+                <article class="radio-buttons-wrapper">
+                    <input type="radio" id="man" name="gender" value="Man">
+                    <label for="man">Man</label><br>
+                    <input type="radio" id="women" name="gender" value="Women">
+                    <label for="women">Women</label><br>
+                    <input type="radio" id="both" name="gender" value="Both">
+                    <label for="both">Both</label>
+                </article>
+                <article class="container">
+                      <a class="special-hover" href="#"><span>SUBSCRIBE</span></a>
+{#                    <input class="create-wo-btn subscribe-btn" type="submit" value="SUBSCRIBE">#}
+                </article>
+            </form>
+
+        </article>
+        <article>
+            <p class="article-headers">STAY CONNECTED</p>
+            <ul class="social-net">
+                <li class="fb-art">
+                    <a href="#"><i class="fab fa-facebook-square ahover"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                </li>
+            </ul>
+        </article>
+        <article class="blog-art">
+             <p class="article-headers">OUR LATEST BLOG POSTS</p>
+               <ul class="blogs-ul">
+                   <li>
+                       <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                   </li>
+                   <li>
+                       <a href="#">Accusamus ipsam provident tempore.</a>
+                   </li>
+                   <li>
+                       <a href="#">Ex, porro, quo.</a>
+                   </li>
+                   <li>
+                       <a href="#">Aspernatur dolor expedita, ipsum magnam necessitatibus nostrum sunt temporibus.</a>
+                   </li>
+               </ul>
+        </article>
+
+    </section>
+    <section class="footer-second-part-wrapper">
+        <section class="footer-second-part">
+            <article class="info-footer">
+                <a href="#">Contact Us</a>
+            </article>
+            <article class="info-footer">
+                <a href="#">Terms of Use</a>
+            </article>
+            <article class="info-footer">
+                <a href="#">Privacy Policy</a>
+            </article>
+            <article class="info-footer">
+                <a href="#"> Cookie Policy</a>
+            </article>
+            <article class="info-footer">
+                <a href="#">Manage Cookies</a>
+            </article>
+        </section>
+    </section>
+
+
+
+    <button onclick="topFunction()" class="go-back-btn" id="myBtn" title="Go to top"><i class="fas fa-chevron-circle-up"></i></button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</footer>

@@ -1,5 +1,17 @@
+.content-wrapp{
+    position: relative;
+    min-height: 100vh;
+    background: #F0F8FF;
+}
 .main-body{
     background: #F0F8FF;
+    padding-bottom: 2.5rem;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 .header-wrapper{
     margin-top: 0;
@@ -102,6 +114,7 @@
 .its-funny-but-is-main-wrapper{
     display: flex;
     justify-content: center;
+    /*margin-bottom: 155px;*/
 }
 .stats-side{
     border-bottom: 2px dotted #996633;

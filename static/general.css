@@ -1,5 +1,8 @@
 html{
     background: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 body {
     font-family: 'cursive', "Berlin Sans FB";

@@ -13,6 +13,7 @@
     background: #B0E0E6;
     padding: 12px;
     margin: 16px;
+    
 }
 .delete{
     background: red !important;
@@ -24,8 +25,8 @@
 .pic-wrapper{
     border: 1px solid #996633;
     border-radius: 4px;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 }
 .pic-wrapper img{
     width: 100%;
