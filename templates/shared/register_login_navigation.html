@@ -1,17 +1,22 @@
 <link rel="stylesheet" href="/static/Public_part.css">
 
-<header>
-        <nav class="nav">
-            <ul class="ul-nav">
-                <li class="li-nav">
-                    <a class="nav-li-va" href="{% url 'register_user' %}">Workout tracker</a>
-                </li>
-                <li class="li-nav">
-                    <a class="nav-li-va" href="{% url 'register_user' %}">Register</a>
-                </li>
-                <li class="li-nav">
-                    <a class="nav-li-va" href="{% url 'login_user' %}">Login</a>
-                </li>
-            </ul>
-        </nav>
-</header>
+{#<header>#}
+{#        <nav class="nav">#}
+{#            <ul class="ul-nav">#}
+{#                <li class="li-nav">#}
+{#                    <a class="nav-li-va" href="{% url 'register_user' %}">Workout tracker</a>#}
+{#                </li>#}
+{#                <li class="li-nav">#}
+{#                    <a class="nav-li-va" href="{% url 'register_user' %}">Register</a>#}
+{#                </li>#}
+{#                <li class="li-nav">#}
+{#                    <a class="nav-li-va" href="{% url 'login_user' %}">Login</a>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </nav>#}
+{#</header>#}
+<nav class="new-nav">
+  <a href="{% url 'register_user' %}">Register</a>
+  <a href="{% url 'login_user' %}">Login</a>
+  <div class="animation start-home"></div>
+</nav>

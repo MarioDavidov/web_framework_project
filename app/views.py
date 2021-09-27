@@ -86,7 +86,8 @@ class CreateWorkoutView(views.CreateView):
 """
 
 
-def edit_workout(request, pk):
+def edit_workout(request, pk =None):
+
     workout = Workout.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
@@ -103,6 +104,7 @@ def edit_workout(request, pk):
             return redirect('workouts')
         context = {
             'workout': workout,
+            'profile_user': user,
             'form': form
         }
         return render(request, 'workouts.html', context)

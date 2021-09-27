@@ -1,22 +1,31 @@
 <link rel="stylesheet" href="/static/Public_part.css">
-<header>
-    <nav class="nav">
-        <ul class="ul-nav">
-            <li class="li-nav">
-                <a class="nav-li-va" href="{% url 'current user profile' %}"> Home</a>
-            </li>
-            <li class="li-nav">
-                <a id="user_name" class="nav-li-va" href="{% url 'current user profile' %}">{{ profile_user.username}}</a>
-            </li>
-            <li class="li-nav">
-                <a class="nav-li-va" href="{% url 'workouts' %}">Workouts</a>
-            </li>
-            <li class="li-nav">
-                <a class="nav-li-va" href="{% url 'progress_picture' %}">Progress pictures</a>
-            </li>
-            <li class="li-nav">
-                <a class="nav-li-va" href="{% url 'logout_user' %}">Logout</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+{#<header>#}
+{#    <nav class="nav">#}
+{#        <ul class="ul-nav">#}
+{#            <li class="li-nav">#}
+{#                <a class="nav-li-va" href="{% url 'current user profile' %}"> Home</a>#}
+{#            </li>#}
+{#            <li class="li-nav">#}
+{#                <a id="user_name" class="nav-li-va" href="{% url 'current user profile' %}">{{ profile_user.username}}</a>#}
+{#            </li>#}
+{#            <li class="li-nav">#}
+{#                <a class="nav-li-va" href="{% url 'workouts' %}">Workouts</a>#}
+{#            </li>#}
+{#            <li class="li-nav">#}
+{#                <a class="nav-li-va" href="{% url 'progress_picture' %}">Progress pictures</a>#}
+{#            </li>#}
+{#            <li class="li-nav">#}
+{#                <a class="nav-li-va" href="{% url 'logout_user' %}">Logout</a>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </nav>#}
+{#</header>#}
+<nav class="new-nav">
+  <a href="{% url 'current user profile' %}">Home</a>
+  <a href="{% url 'workouts' %}">Workouts</a>
+  <a href="{% url 'progress_picture' %}">Progress</a>
+  <a href="{% url 'progress_picture' %}">Weight</a>
+  <a href="{% url 'logout_user' %}">logout</a>
+{#  <a href="{% url 'logout_user' %}">Weight</a>#}
+  <div class="animation start-home"></div>
+</nav>
