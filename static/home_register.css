@@ -24,6 +24,7 @@
 }
 .button:hover{
     background: #059862;
+    cursor: pointer;
 }
 .reg-icon-wrapper{
     width: 250px;

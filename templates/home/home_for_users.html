@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="/static/general.css">
-    <link rel="stylesheet" href="/static/home_for_users.css">
+    <link rel="stylesheet" href="{% static 'general.css' %}">
+    <link rel="stylesheet" href="{% static 'home_for_users.css' %}">
+    <script src="/static/JS/create_workout.js"></script>
+
+
 </head>
 
 <body class="content-wrapp">
@@ -46,7 +50,7 @@
         </article>
             <article class="btn-side">
                 <section class="stats-side">
-                    <p>Username: <span class="profile-stats">{{ profile_user    }}</span></p>
+                    <p>Username: <span class="profile-stats">{{ profile_user }}</span></p>
                     <p>Last login: <span class="profile-stats">{{ profile_user.last_login }}</span></p>
                     <p>Workouts: <span class="profile-stats">{{ workouts_user.count }}</span></p>
                     <p>Progress Pictures: <span class="profile-stats">{{ progress_picture_user.count }}</span></p>

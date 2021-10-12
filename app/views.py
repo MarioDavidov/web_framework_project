@@ -7,7 +7,7 @@ from app.forms.workout import WorkoutForm
 from app.models import Workout, ProgressPicture
 from django.views import generic as views
 
-from authentication.views import user_profile
+from authentication.models import UserProfile
 
 
 def home_page(request):
@@ -40,30 +40,35 @@ def workouts(request, pk=None):
         }
         return render(request, 'workouts.html', context)
 
+
 # 2021-03-21 --> fucking valid date
 # NxBhej_4g+KBwasdasd --> pass for user "Mario"
 # NxBhej_4g+KBwasdasd --> pass for user "Mario2"
 # $AU2QdtJt5re7mQ&
 # NxBhej_4g+KBwasdasd
 
-def create_workout(request ,pk =None):
+def create_workout(request, pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
-    
+    WorkoutForm.user = user
     if request.method == 'GET':
+
         context = {
             'form': WorkoutForm(),
             'profile_user': user,
-            'user_id': user.id
+            'user_id': user.id,
         }
+
         return render(request, 'create_workout.html', context)
     else:
         form = WorkoutForm(request.POST)
+        WorkoutForm.user = user
         if form.is_valid():
             form.save()
             return redirect('workouts')
         context = {
             'form': WorkoutForm(),
-            'profile_user': user
+            'profile_user': user,
+            'user_id': user.id,
         }
         return render(request, 'workouts.html', context)
 
@@ -86,8 +91,7 @@ class CreateWorkoutView(views.CreateView):
 """
 
 
-def edit_workout(request, pk =None):
-
+def edit_workout(request, pk=None):
     workout = Workout.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
@@ -104,7 +108,7 @@ def edit_workout(request, pk =None):
             return redirect('workouts')
         context = {
             'workout': workout,
-            'profile_user': user,
+            # 'profile_user': user,
             'form': form
         }
         return render(request, 'workouts.html', context)
@@ -170,7 +174,7 @@ def progres_picture(request, pk=None):
         return render(request, 'progress_pictures/progress_pictures.html', context)
 
 
-def create_progress_picture(request, pk =None):
+def create_progress_picture(request, pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
@@ -194,6 +198,6 @@ class DeletePictureView(views.DeleteView):
     template_name = 'progress_pictures/delete_progress_pic.html'
     success_url = reverse_lazy('progress_picture')
 
-#U*whCB6Q!48Y+B%@
+# U*whCB6Q!48Y+B%@
 
-#hG=%@X!yKkE3%HJ?asd
+# hG=%@X!yKkE3%HJ?asd

@@ -13,8 +13,7 @@ class Workout(models.Model):
     fourth_exercise = models.CharField(max_length=40, blank=True)
     fifth_exercise = models.CharField(max_length=40, blank=True)
 
-
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, null=True, on_delete=models.CASCADE)
 
 
 class ProgressPicture(models.Model):

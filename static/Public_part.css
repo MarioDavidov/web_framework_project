@@ -46,6 +46,8 @@
   background-color: #B0E0E6;
   border-radius: 8px;
   font-size: 0;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
 }
 .new-nav a {
   line-height: 50px;
@@ -94,7 +96,7 @@
 .new-nav .start-about,.new-nav a:nth-child(2):hover~.animation {
   width: 140px;
   left: 100px;
-  background-color: #e74c3c;
+  background-color: lightskyblue;
 }
 .new-nav .start-blog,.new-nav a:nth-child(3):hover~.animation {
   width: 150px;
@@ -111,9 +113,7 @@
   left: 500px;
   background-color: orangered;
 }
-.new-nav a:hover{
-  color: white;
-}
+
 /*.new-nav .start-weight,.new-nav a:nth-child(6):hover~.animation {*/
 /*  width: 120px;*/
 /*  left: 670px;*/
