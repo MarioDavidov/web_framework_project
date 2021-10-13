@@ -7,7 +7,7 @@ class WorkoutForm(forms.ModelForm):
         model = Workout
         fields = '__all__'
 
-        # exclude = ('user',)
+        exclude = ('user',)
 
 
 class DeleteWorkout(WorkoutForm):

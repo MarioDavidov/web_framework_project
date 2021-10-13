@@ -9,18 +9,19 @@
 {% block site_content %}
         <article class="header-wrapper">
             <h1>Create Workout</h1>
+            <h1>2021-03-21</h1>
         </article>
-<button onclick="myFunction()">Try it</button>
+{#<button onclick="myFunction()">Try it</button>#}
     <section class="form-wrapper-CW">
 
         <form class="form-CW" action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
              <article class="cw-icon">
                 <img src="https://cdn2.iconfinder.com/data/icons/outline-landing-page/100/outline4_ready-17-512.png" alt="error">
              </article>
-            2021-03-21
-            <label class="inputs" for="date">Date: {{ form.date }}</label><br>
+
+            <label class="inputs inputalign" for="date">Date:{{ form.date }}</label><br>
             <br>
-            <label class="inputs" for="title">Title: {{ form.tittle }}</label><br>
+            <label class="inputs inputalign" for="title">Title: {{ form.tittle }}</label><br>
             <br>
             <label class="inputs" for="exercise">Exercise: {{ form.first_exercise }}</label><br>
             <br>
@@ -32,7 +33,7 @@
             <br>
             <label class="inputs" for="exercise">Exercise: {{ form.fifth_exercise }}</label><br>
 
-            <p id="user">User: {{ form.user }}</p>
+{#            <p id="user">User: {{ form.user }}</p>#}
             <input type="submit" class="create-wo-btn" value="Create Workout">
             {% csrf_token %}
 

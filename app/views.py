@@ -49,7 +49,7 @@ def workouts(request, pk=None):
 
 def create_workout(request, pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
-    WorkoutForm.user = user
+    # WorkoutForm.user = user
     if request.method == 'GET':
 
         context = {
@@ -61,9 +61,11 @@ def create_workout(request, pk=None):
         return render(request, 'create_workout.html', context)
     else:
         form = WorkoutForm(request.POST)
-        WorkoutForm.user = user
+
         if form.is_valid():
-            form.save()
+            work = form.save(commit=False)
+            work.user = request.user.userprofile
+            work.save()
             return redirect('workouts')
         context = {
             'form': WorkoutForm(),
@@ -185,6 +187,8 @@ def create_progress_picture(request, pk=None):
     else:
         form = ProgressPictureForm(request.POST, request.FILES)
         if form.is_valid():
+            pic = form.save(commit=False)
+            pic.user = request.user.userprofile
             form.save()
             return redirect('progress_picture')
         context = {

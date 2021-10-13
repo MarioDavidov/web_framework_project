@@ -26,11 +26,11 @@
                 <section class="workout-card">
                         <h2>{{ work.date }}</h2>
                         <p>Tittle:{{ work.tittle }}</p>
-                        <p>First exercise: {{ work.first_exercise }}</p>
-                        <p>Second exercise: {{ work.second_exercise }}</p>
-                        <p>Third exercise: {{ work.third_exercise }}</p>
-                        <p>Fourth exercise: {{ work.fourth_exercise }}</p>
-                        <p>Fifth exercise: {{ work.fifth_exercise }}</p>
+                        <p>Exercise: {{ work.first_exercise }}</p>
+                        <p>Exercise: {{ work.second_exercise }}</p>
+                        <p>Exercise: {{ work.third_exercise }}</p>
+                        <p>Exercise: {{ work.fourth_exercise }}</p>
+                        <p>Exercise: {{ work.fifth_exercise }}</p>
                 </section>
                 <section class="buttons-wrapper">
                         <a href="{% url 'edit_workout' work.id %}" class="create-wo-btn edit">Edit workout</a>

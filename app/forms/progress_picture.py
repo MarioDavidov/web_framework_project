@@ -7,3 +7,4 @@ class ProgressPictureForm(forms.ModelForm):
     class Meta:
         model = ProgressPicture
         fields = '__all__'
+        exclude = ('user',)
