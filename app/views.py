@@ -14,6 +14,10 @@ def home_page(request):
     return render(request, 'home/home_for_users.html')
 
 
+def calculator(request):
+    return render(request, 'shared/calculator.html')
+
+
 """
 class WorkoutsView(views.ListView):
     model = Workout

@@ -11,10 +11,10 @@
             <h1>Create Workout</h1>
             <h1>2021-03-21</h1>
         </article>
-{#<button onclick="myFunction()">Try it</button>#}
+
     <section class="form-wrapper-CW">
 
-        <form class="form-CW" action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
+        <form id="items" class="form-CW" action="{% url 'create_workout' %}" method="POST" enctype="multipart/form-data">
              <article class="cw-icon">
                 <img src="https://cdn2.iconfinder.com/data/icons/outline-landing-page/100/outline4_ready-17-512.png" alt="error">
              </article>
@@ -38,6 +38,7 @@
             {% csrf_token %}
 
         </form>
+    
 
     </section>
 {% endblock %}

@@ -1,0 +1,109 @@
+h1{
+    text-align: center;
+}
+.calc-title{
+    margin-right: 40px;
+}
+.BMR-info-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.BMR-info{
+    width: 600px;
+}
+
+.main-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 35px;
+}
+
+.calculator-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 2px solid #996633;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px;
+    background: #B0E0E6;
+}
+.calc-form-inputs{
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+}
+.calc-form-radio-buttons-wrapper{
+    margin-bottom: 12px;
+    margin-right: 37px;
+}
+.create-wo-btn{
+    width: 100% !important;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.intesity-info{
+    width: 500px;
+}
+.result-section-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.result-section{
+    border: 2px solid #996633;
+    border-radius: 4px;
+    margin-top: 20px;
+    background: #B0E0E6;
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.result-section p{
+    font-size: 22px;
+    font-weight: bolder;
+}
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #1abc9c;
+    border-radius: 10px;
+    background-color: #059862;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: #059862;
+    cursor: pointer;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.calculations{
+    color: #9b59b6;
+}
