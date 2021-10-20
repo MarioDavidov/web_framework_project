@@ -13,8 +13,8 @@
 }
 .delete-side{
     display: flex;
-    margin-right: 10px;
-    border-right: 1px dotted #996633;
+    margin-right: 15px;
+    /*border-right: 1px dotted #996633;*/
 }
 .back-side{
     display: flex;
