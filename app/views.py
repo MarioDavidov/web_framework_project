@@ -4,7 +4,8 @@ from django.urls import reverse_lazy
 
 from app.forms.progress_picture import ProgressPictureForm
 from app.forms.workout import WorkoutForm
-from app.models import Workout, ProgressPicture
+from app.forms.weight import WeightForm
+from app.models import Workout, ProgressPicture, Weight
 from django.views import generic as views
 
 from authentication.models import UserProfile
@@ -206,6 +207,37 @@ class DeletePictureView(views.DeleteView):
     template_name = 'progress_pictures/delete_progress_pic.html'
     success_url = reverse_lazy('progress_picture')
 
+
 # U*whCB6Q!48Y+B%@
 
 # hG=%@X!yKkE3%HJ?asd
+
+def create_weight(request, pk=None):
+    user = request.user if pk is None else User.objects.get(pk=pk)
+    if request.method == 'GET':
+        context = {
+            'weight_form': WeightForm(),
+            'profile_user': user,
+            'weight_user': user.userprofile.weight_set.all(),
+        }
+        return render(request, 'weigth/weigth.html', context)
+    else:
+        form = WeightForm(request.POST)
+        if form.is_valid():
+            weight = form.save(commit=False)
+            weight.user = request.user.userprofile
+            weight.save()
+            return redirect('user_weight')
+        context = {
+            'form': WeightForm(),
+            'profile_user': user,
+            'user_id': user.id,
+        }
+
+        return render(request, 'weigth/weigth.html', context)
+
+
+class DeleteWeight(views.DeleteView):
+    model = Weight
+    template_name = 'weigth/delete_weight.html'
+    success_url = reverse_lazy('user_weight')

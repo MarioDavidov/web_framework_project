@@ -48,3 +48,7 @@
 .edit:hover{
     background: saddlebrown !important;
 }
+.form-out{
+    font-size: 18px;
+    color: #9b59b6;
+}

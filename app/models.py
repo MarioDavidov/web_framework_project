@@ -25,3 +25,10 @@ class ProgressPicture(models.Model):
         blank=True)
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+
+
+class Weight(models.Model):
+    date = models.DateField()
+    weight = models.CharField(max_length=6)
+
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)

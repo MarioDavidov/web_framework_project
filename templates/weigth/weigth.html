@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/static/weight.css">
+{% extends 'home/home_for_users.html' %}
+
+
+
+{% block site_content %}
+    <article class="header-wrapper">
+        <h1>Add Weight</h1>
+
+    </article>
+    <main class="main-wrapper">
+        <section class="add-weight-form-wrapper">
+            <form class="adding-weight-form" action="{% url 'user_weight' %}" method="POST" enctype="multipart/form-data">
+                <article class="weigth-icon">
+                    <img src="https://cdn2.iconfinder.com/data/icons/medicine-and-medical-diagnostics-1/32/Medical_diagnostics_healthy_weight_weight-256.png" alt="error">
+                </article>
+                <label class="date-label" for="date">Date:{{ weight_form.date }}</label><br>
+                <br>
+                <label for="weight">Weight: {{ weight_form.weight }}</label><br>
+                <input type="submit" class="create-wo-btn" value="Add Weight">
+                {% csrf_token %}
+                <br>
+            </form>
+        </section>
+    <section class="weights-33">
+        {% if not weight_user %}
+            <article class="header-wrapper">
+                <h1>NO DATA TO SHOW</h1>
+             </article>
+            {% endif %}
+        <article class="weights-art">
+            {% for weight in weight_user %}
+                <section class="weights">
+                    <p class="weights-p-1">{{ weight.date }}</p>
+                    <p class="weights-p">Weight: <span class="weight-int">{{ weight.weight }}</span> kg.</p>
+                    <a href="{% url 'delete_weight_view' weight.id %}" class="create-wo-btn delete">Delete</a>
+                </section>
+            {% endfor %}
+        </article>
+
+    </section>
+    <section class="chart-33">
+        <h1>chart here</h1>
+    </section>
+    </main>
+{% endblock %}

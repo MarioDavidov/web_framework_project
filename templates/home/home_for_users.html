@@ -62,7 +62,8 @@
                 <section class="button-wrapper">
                     <a href="{%  url 'create_workout' %}" class="create-wo-btn">Create workout</a>
                     <a href="{%  url 'create_progress_pictures' %}" class="create-wo-btn margin-for-btn">Create progress picture</a>
-                    <a href="#" class="create-wo-btn margin-for-btn">Add weight</a>
+                    <a href="{%  url 'user_weight' %}" class="create-wo-btn margin-for-btn">Add weight</a>
+                    <a href="{% url 'weigth list api' %}" class="create-wo-btn margin-for-btn">Testing API</a>
                 </section>
 
             </article>

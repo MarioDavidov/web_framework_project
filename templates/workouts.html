@@ -25,12 +25,12 @@
             <section class="workout-wrapper">
                 <section class="workout-card">
                         <h2>{{ work.date }}</h2>
-                        <p>Tittle:{{ work.tittle }}</p>
-                        <p>Exercise: {{ work.first_exercise }}</p>
-                        <p>Exercise: {{ work.second_exercise }}</p>
-                        <p>Exercise: {{ work.third_exercise }}</p>
-                        <p>Exercise: {{ work.fourth_exercise }}</p>
-                        <p>Exercise: {{ work.fifth_exercise }}</p>
+                    <p>Tittle: <span class="form-out">{{ work.tittle }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.first_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.second_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.third_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.fourth_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.fifth_exercise }}</span></p>
                 </section>
                 <section class="buttons-wrapper">
                         <a href="{% url 'edit_workout' work.id %}" class="create-wo-btn edit">Edit workout</a>

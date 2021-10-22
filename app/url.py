@@ -2,7 +2,7 @@ from django.urls import path
 
 from app.views import home_page, edit_workout, workouts, \
     DeleteWorkoutView, details_workout, create_progress_picture, progres_picture, DeletePictureView, \
-    create_workout, calculator
+    create_workout, calculator, create_weight, DeleteWeight
 
 urlpatterns = [
     path('home/', home_page, name='home_page'),
@@ -22,6 +22,8 @@ urlpatterns = [
     path('progres_picture/', progres_picture, name= 'progress_picture'),
     path('picture/delete/<int:pk>/', DeletePictureView.as_view(), name='delete_progress_picture'),
 
+    path('user_weight/', create_weight, name='user_weight'),
+    path('user_weight/delete/<int:pk>/', DeleteWeight.as_view(), name='delete_weight_view'),
 
 
 ]
