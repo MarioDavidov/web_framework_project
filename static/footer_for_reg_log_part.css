@@ -1,0 +1,10 @@
+.register-part-footer{
+    /*position: relative;*/
+    /*height: 50px;*/
+    background-color: #B0E0E6;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    margin-top: 60px;
+}
